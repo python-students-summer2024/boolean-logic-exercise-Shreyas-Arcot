@@ -2,9 +2,10 @@ from solutions import *
 
 
 def main():
+
     # call the is_sweltering() function and output a response
     if is_sweltering():
-        print("Oh no, it is sweltering hot today!")
+        print ("Oh no, it is sweltering hot today!")
     else:
         print("Thankfully, it's not too hot today.")
 

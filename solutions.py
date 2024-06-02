@@ -14,7 +14,11 @@ def is_sweltering():
       :returns: True if the temperature is over 90, False otherwise.
     """
     # write your code for this function below this line.
-
+    current_temperature_sweltering = int(input("What is the current temperature? (in Farenheit)"))
+    if current_temperature_sweltering > 90:
+      return True
+    else:
+      return False
 
 def is_warm():
     """
@@ -26,6 +30,11 @@ def is_warm():
     """
     # write your code for this function below this line.
 
+    current_temperature_warm = int(input("What is the current temperature? (In Farenheit)"))
+    if current_temperature_warm >= 75 and current_temperature_warm <= 87:
+      return True
+    else:
+      return False
 
 def is_humid():
     """
@@ -36,7 +45,11 @@ def is_humid():
       :returns: True if it is humid today, False otherwise.
     """
     # write your code for this function below this line.
-
+    current_humidity = input("Is it currently humid?")
+    if current_humidity == "yes":
+      return True
+    else:
+      return False
 
 def is_inclement():
     """
@@ -48,6 +61,11 @@ def is_inclement():
     """
     # write your code for this function below this line.
 
+    today_forecast = input("What is the weather forecast for today?")
+    if today_forecast == "rain" or today_forecast == "snow" or today_forecast == "sleet":
+      return True
+    else:
+       return False
 
 def is_typical_new_york_summer():
     """
@@ -60,7 +78,11 @@ def is_typical_new_york_summer():
       :returns: True if the temperature is over 90 and it is humid, False otherwise.
     """
     # write your code for this function below this line.
-
+    
+    if is_sweltering() and is_humid():
+      return True 
+    else:
+      return False
 
 def is_cool_and_nice():
     """
@@ -72,3 +94,8 @@ def is_cool_and_nice():
       :returns: True if the weather is cool and nice today, False otherwise.
     """
     # write your code for this function below this line.
+
+    if is_sweltering() or is_warm() or is_humid() or is_inclement():
+      return False
+    else:
+      return True
